@@ -24,7 +24,7 @@ namespace exception_handling
         {
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddScoped<SalutationHandler>();
-            serviceCollection.AddScoped<FallbackPolicyHandler<SalutationCommand>>();
+            serviceCollection.AddScoped(typeof(FallbackPolicyHandler<>));
             return serviceCollection.BuildServiceProvider();
         }
 
