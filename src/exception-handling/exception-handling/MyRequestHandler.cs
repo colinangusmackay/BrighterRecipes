@@ -9,7 +9,7 @@ namespace exception_handling
         public override TCommand Fallback(TCommand command)
         {
             if (this.Context.Bag
-                .ContainsKey(FallbackPolicyHandler<SalutationCommand>
+                .ContainsKey(FallbackPolicyHandler<TCommand>
                     .CAUSE_OF_FALLBACK_EXCEPTION))
             {
                 Exception exception = (Exception)this.Context
