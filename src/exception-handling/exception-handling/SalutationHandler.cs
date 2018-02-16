@@ -21,7 +21,7 @@ namespace exception_handling
                 throw new ApplicationException("A death-eater has appeared.");
         }
 
-        public override SalutationCommand ExceptionFallback(SalutationCommand command, Exception exception)
+        protected override SalutationCommand ExceptionFallback(SalutationCommand command, Exception exception)
         {
             Console.WriteLine(exception);
             return base.ExceptionFallback(command, exception);

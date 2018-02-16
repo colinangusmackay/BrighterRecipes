@@ -20,7 +20,7 @@ namespace exception_handling
             return base.Fallback(command);
         }
 
-        public virtual TCommand ExceptionFallback(TCommand command, Exception exception)
+        protected virtual TCommand ExceptionFallback(TCommand command, Exception exception)
         {
             // If exceptions need to be handled, 
             // this should be implemented in a derived class
