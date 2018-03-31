@@ -3,7 +3,7 @@ using Paramore.Brighter;
 
 namespace steps_and_timing
 {
-    public class TargetHandler : RequestHandler<TargetCommand>
+    public class TargetHandler : BaseTargetHandler<TargetCommand>
     {
         [StepsAndTiming(step: 1, timing: HandlerTiming.Before)]
         [StepsAndTiming(step: 2, timing: HandlerTiming.Before)]
